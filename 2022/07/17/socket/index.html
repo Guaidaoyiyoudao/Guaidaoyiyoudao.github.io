@@ -13,7 +13,7 @@
 
     <title>
         
-        socket - undefined
+        socket基础 - undefined
         
     </title>
 
@@ -101,7 +101,7 @@
     </div>
     
         <div id="toc" class="toc-article">
-    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#socket%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B"><span class="toc-text">socket网络编程</span></a></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#socket"><span class="toc-text">socket</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9C%8D%E5%8A%A1%E7%AB%AF"><span class="toc-text">服务端</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#socket-1"><span class="toc-text">socket()</span></a></li></ol></li></ol></li></ol>
 </div>
     
 </div>
@@ -133,7 +133,7 @@
 
 <div class="post-container">
     <div class="post-title">
-        socket
+        socket基础
     </div>
 
     <div class="post-meta">
@@ -141,10 +141,10 @@
         
         <span class="attr">Tags：/
         
-        <a class="tag" href="/tags/#linux" title="linux">linux</a>
+        <a class="tag" href="/tags/#网络编程" title="网络编程">网络编程</a>
         <span>/</span>
         
-        <a class="tag" href="/tags/#网络编程" title="网络编程">网络编程</a>
+        <a class="tag" href="/tags/#linux" title="linux">linux</a>
         <span>/</span>
         
         
@@ -154,7 +154,20 @@
 </span>
     </div>
     <div class="post-content no-indent">
-        <h1 id="socket网络编程"><a href="#socket网络编程" class="headerlink" title="socket网络编程"></a>socket网络编程</h1>
+        <h1 id="socket"><a href="#socket" class="headerlink" title="socket"></a>socket</h1><h2 id="服务端"><a href="#服务端" class="headerlink" title="服务端"></a>服务端</h2><p>服务端的编程大致如下：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">socket</span>()</span><br><span class="line"><span class="built_in">bind</span>()</span><br><span class="line"><span class="built_in">listen</span>()</span><br><span class="line"><span class="built_in">accept</span>()</span><br></pre></td></tr></table></figure>
+<h3 id="socket-1"><a href="#socket-1" class="headerlink" title="socket()"></a>socket()</h3><p>socket用于创建一个套接字，有三个参数</p>
+<ul>
+<li>famility<ul>
+<li>协议族，基本是都用<code>AF_INET</code></li>
+</ul>
+</li>
+<li>protocol<ul>
+<li>协议，要么TCP:<code>SOCKET_STREAM</code>或者UDP:<code>SOCKET_DGRAM</code></li>
+</ul>
+</li>
+</ul>
+
         
         <br />
         <div id="comment-container">
