@@ -5,9 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta property="og:description" content="">
+    <meta property="og:description" content="喜欢骑自行车的程序员">
     <meta property="og:type" content="website">
-    <meta name="description" content="">
+    <meta name="description" content="喜欢骑自行车的程序员">
     <meta name="keyword"  content="">
     <link rel="shortcut icon" href="/img/favicon.ico">
 
@@ -158,7 +158,16 @@
     </div>
     <div class="post-content no-indent">
         <h1 id="libevent使用"><a href="#libevent使用" class="headerlink" title="libevent使用"></a>libevent使用</h1><p>在了解libevent的源码之前，首先看一下libevent的基本使用方法</p>
-<h2 id="libevent版HelloWorld"><a href="#libevent版HelloWorld" class="headerlink" title="libevent版HelloWorld"></a>libevent版HelloWorld</h2>
+<h2 id="libevent版HelloWorld"><a href="#libevent版HelloWorld" class="headerlink" title="libevent版HelloWorld"></a>libevent版HelloWorld</h2><p><code>libevent</code>有两个比较重要的结构体</p>
+<ul>
+<li><code>event</code></li>
+<li><code>event_base</code></li>
+</ul>
+<p>其中，<code>event</code>结构体用来存放诸如<code>fd</code>以及回调函数等，结构体定义：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><code>event_base</code>是整个libevent库的核心</p>
+
         
         <br />
         <div id="comment-container">
