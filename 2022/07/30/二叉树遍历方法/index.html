@@ -101,7 +101,7 @@
     </div>
     
         <div id="toc" class="toc-article">
-    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E9%81%8D%E5%8E%86%E6%96%B9%E6%B3%95"><span class="toc-text">二叉树的遍历方法</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E5%BA%8F%E9%81%8D%E5%8E%86"><span class="toc-text">前序遍历</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%AD%E5%BA%8F%E9%81%8D%E5%8E%86"><span class="toc-text">中序遍历</span></a></li></ol></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E9%81%8D%E5%8E%86%E6%96%B9%E6%B3%95"><span class="toc-text">二叉树的遍历方法</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%89%8D%E5%BA%8F%E9%81%8D%E5%8E%86"><span class="toc-text">前序遍历</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B8%AD%E5%BA%8F%E9%81%8D%E5%8E%86"><span class="toc-text">中序遍历</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%90%8E%E5%BA%8F%E9%81%8D%E5%8E%86"><span class="toc-text">后序遍历</span></a></li></ol></li></ol>
 </div>
     
 </div>
@@ -161,8 +161,23 @@
 <li>后序遍历</li>
 </ul>
 <p>因此，对二叉树的序列化和反序列化可采用上述三种方法</p>
-<h2 id="前序遍历"><a href="#前序遍历" class="headerlink" title="前序遍历"></a>前序遍历</h2><h2 id="中序遍历"><a href="#中序遍历" class="headerlink" title="中序遍历"></a>中序遍历</h2><p>中序遍历的顺序为，先左节点，再根节点，后右节点</p>
+<h2 id="前序遍历"><a href="#前序遍历" class="headerlink" title="前序遍历"></a>前序遍历</h2><p>前序遍历的顺序为，先根节点，再左节点，后右节点</p>
+<h2 id="中序遍历"><a href="#中序遍历" class="headerlink" title="中序遍历"></a>中序遍历</h2><p>中序遍历的顺序为，</p>
+<ol>
+<li>先左节点</li>
+<li>再根节点</li>
+<li>后右节点</li>
+</ol>
 <img src="/2022/07/30/%E4%BA%8C%E5%8F%89%E6%A0%91%E9%81%8D%E5%8E%86%E6%96%B9%E6%B3%95/%E4%B8%AD%E5%BA%8F%E9%81%8D%E5%8E%86%E7%A4%BA%E6%84%8F%E5%9B%BE.png" class="" title="中序遍历示意图">
+
+<p>当我们使用中序遍历这个二叉树的时候，输出则为</p>
+<p><code>[1,2,3,4,5,7]</code></p>
+<h2 id="后序遍历"><a href="#后序遍历" class="headerlink" title="后序遍历"></a>后序遍历</h2><p>后续遍历的顺序则为</p>
+<ol>
+<li>先左节点</li>
+<li>再右节点</li>
+<li>后根节点</li>
+</ol>
 
         
         <br />
