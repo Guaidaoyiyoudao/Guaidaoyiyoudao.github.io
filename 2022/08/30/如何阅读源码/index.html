@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang=zh-CN>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:description" content="喜欢骑自行车的程序员">
+    <meta property="og:type" content="website">
+    <meta name="description" content="喜欢骑自行车的程序员">
+    <meta name="keyword"  content="">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>
+        
+        如何阅读源码 - 一个向往自由的程序员
+        
+    </title>
+
+    <!-- Custom CSS -->
+    
+<link rel="stylesheet" href="/css/aircloud.css">
+
+    
+<link rel="stylesheet" href="/css/gitment.css">
+
+    <!--<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">-->
+    <link href="//at.alicdn.com/t/font_620856_28hi1hpxx24.css" rel="stylesheet" type="text/css">
+    <!-- ga & ba script hoook -->
+    <script></script>
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+<body>
+
+<div class="site-nav-toggle" id="site-nav-toggle">
+    <button>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+        <span class="btn-bar"></span>
+    </button>
+</div>
+
+<div class="index-about">
+    <i> 学习永无止境 </i>
+</div>
+
+<div class="index-container">
+    
+    <div class="index-left">
+        
+<div class="nav" id="nav">
+    <div class="avatar-name">
+        <div class="avatar radius">
+            <img src="/img/avatar.jpeg" />
+        </div>
+        <div class="name">
+            <i>li kongqiang</i>
+        </div>
+    </div>
+    <div class="contents" id="nav-content">
+        <ul>
+            <li >
+                <a href="/">
+                    <i class="iconfont icon-shouye1"></i>
+                    <span>主页</span>
+                </a>
+            </li>
+            <li >
+                <a href="/tags">
+                    <i class="iconfont icon-biaoqian1"></i>
+                    <span>标签</span>
+                </a>
+            </li>
+            <li >
+                <a href="/archives">
+                    <i class="iconfont icon-guidang2"></i>
+                    <span>存档</span>
+                </a>
+            </li>
+            <li >
+                <a href="/collect/">
+                    <i class="iconfont icon-shoucang1"></i>
+                    <span>收藏</span>
+                </a>
+            </li>
+            <li >
+                <a href="/about/">
+                    <i class="iconfont icon-guanyu2"></i>
+                    <span>关于</span>
+                </a>
+            </li>
+            
+            <li>
+                <a id="search">
+                    <i class="iconfont icon-sousuo1"></i>
+                    <span>搜索</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    
+        <div id="toc" class="toc-article">
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%A6%82%E4%BD%95%E9%98%85%E8%AF%BB%E6%BA%90%E7%A0%81"><span class="toc-text">如何阅读源码</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%95%B4%E4%BD%93%E5%88%B0%E9%83%A8%E5%88%86"><span class="toc-text">整体到部分</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BB%8E%E5%B7%A5%E7%A8%8B%E7%9A%84%E5%AE%9E%E9%99%85%E9%97%AE%E9%A2%98%E5%87%BA%E5%8F%91"><span class="toc-text">从工程的实际问题出发</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8A%A8%E6%89%8B%E4%BC%98%E5%85%88%EF%BC%8C%E9%98%85%E8%AF%BB%E5%85%B6%E6%AC%A1"><span class="toc-text">动手优先，阅读其次</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8F%82%E8%80%83%E8%B5%84%E6%96%99"><span class="toc-text">参考资料</span></a></li></ol>
+</div>
+    
+</div>
+
+
+<div class="search-field" id="search-field">
+    <div class="search-bg" id="search-bg"></div>
+    <div class="search-container">
+        <div class="search-input">
+            <span id="esc-search"> <i class="icon-fanhui iconfont"></i></span>
+            <input id="search-input"/>
+            <span id="begin-search">搜索</span>
+        </div>
+        <div class="search-result-container" id="search-result-container">
+
+        </div>
+    </div>
+</div>
+
+        <div class="index-about-mobile">
+            <i> 学习永无止境 </i>
+        </div>
+    </div>
+    
+    <div class="index-middle">
+        <!-- Main Content -->
+        
+
+
+<div class="post-container">
+    <div class="post-title">
+        如何阅读源码
+    </div>
+
+    <div class="post-meta">
+        <span class="attr">发布于：<span>2022-08-30 21:05:37</span></span>
+        
+        <span class="attr">标签：/
+        
+        <a class="tag" href="/tags/#源码学习" title="源码学习">源码学习</a>
+        <span>/</span>
+        
+        
+        </span>
+        <span class="attr">访问：<span id="busuanzi_value_page_pv"></span>
+</span>
+</span>
+    </div>
+    <div class="post-content no-indent">
+        <h1 id="如何阅读源码"><a href="#如何阅读源码" class="headerlink" title="如何阅读源码"></a>如何阅读源码</h1><p>开源代码中，基本上都是万行代码以上，如果一头扎进到源码的海洋中，很容易就迷失在里面。<br>在阅读源码之前，必须要明确三个点：</p>
+<ul>
+<li>从整体到部分</li>
+<li>从工程的实际问题出发</li>
+<li>动手优先，阅读其次</li>
+</ul>
+<h2 id="整体到部分"><a href="#整体到部分" class="headerlink" title="整体到部分"></a>整体到部分</h2><p>我们在阅读源码之前，绝不要陷入到某些代码的细节当中。我们在阅读源码之前，我们可以从一个功能开始看。如Linux内核中的<code>task_struct</code>结构体。这个结构体包含了很多字段，如果我们一个一个字段看下来，想必人已经晕了。但是如果我们从整体去看，这个结构体是用于在内核中描述进程的，那么进程又是啥呢？是操作系统分配硬件资源的基本单元。理解了进程，我们可以再想想，进程又需要包括哪些呢？内存？打开的文件？信号等等。</p>
+<h2 id="从工程的实际问题出发"><a href="#从工程的实际问题出发" class="headerlink" title="从工程的实际问题出发"></a>从工程的实际问题出发</h2><p>通常在阅读源码之前，我们一定是要着目的去看的，不管说是想要应用这个代码，还是说想要在代码中加入某些功能，绝不能漫无目的的去阅读。</p>
+<h2 id="动手优先，阅读其次"><a href="#动手优先，阅读其次" class="headerlink" title="动手优先，阅读其次"></a>动手优先，阅读其次</h2><p>如果只是光看源码，很容易造成学着学着又把前面的忘了，一定要着理解源码的基础上，学会怎么去应用。在实践中加强自己对源码的理解。</p>
+<h1 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h1><p><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=IGmPmG_cg3s">如何阅读Linux内核的源代码</a></p>
+
+        
+        <br />
+        <div id="comment-container">
+        </div>
+        <div id="disqus_thread"></div>
+        <div id="lv-container"></div>
+        <div class="giscus"></div>
+    </div>
+</div>
+
+    </div>
+</div>
+
+
+<footer class="footer">
+    <ul class="list-inline text-center">
+        
+        
+
+        
+
+        
+
+        
+
+        
+
+    </ul>
+    
+    <p>
+        <span id="busuanzi_container_site_pv">
+            <span id="busuanzi_value_site_pv"></span>PV
+        </span>
+        <span id="busuanzi_container_site_uv">
+            <span id="busuanzi_value_site_uv"></span>UV
+        </span>
+        Created By <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>  Theme <a target="_blank" rel="noopener" href="https://github.com/aircloud/hexo-theme-aircloud">AirCloud</a></p>
+</footer>
+
+
+
+
+</body>
+
+<script>
+    // We expose some of the variables needed by the front end
+    window.hexo_search_path = "search.json"
+    window.hexo_root = "/"
+    window.isPost = true
+</script>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+
+<script src="/js/index.js"></script>
+
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+
+    <script src="https://giscus.app/client.js"
+    data-repo="Guaidaoyiyoudao/giscus"
+    data-repo-id="R_kgDOHq70_w"
+    data-category="Announcements"
+    data-category-id="DIC_kwDOHq70_84CQRFm"
+    data-mapping="pathname"
+    data-reactions-enabled="1"
+    data-emit-metadata="0"
+    data-input-position="bottom"
+    data-theme="light"
+    data-lang="zh-CN"
+    data-loading="lazy"
+    crossorigin="anonymous"
+    async>
+</script>
+
+
+
+
+</html>
